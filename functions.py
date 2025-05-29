@@ -1,11 +1,24 @@
 import random
 import time
-
+import streamlit as st
 
 ###stream
 class StreamResponse:
     def __init__(self, text_to_stream=None):
         self.text_to_stream = text_to_stream
+        
+    def _get_stream(self):
+        for chunk in self.text_to_stream.split():
+            time.sleep(0.05)
+            yield chunk
+            
+    def write_stream(self):
+        stream = self._get_stream()
+        result = ""
+        container = st.empty()
+        for chunk in stream:
+            result += chunk
+            container.write(result, unsafe_allow_html=True)
 
 
     def text_stream_generator(self):
@@ -23,3 +36,5 @@ class StreamResponse:
         for word in response.split():
             yield word + " "
             time.sleep(0.05)
+
+
