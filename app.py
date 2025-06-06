@@ -45,13 +45,14 @@ with st.sidebar:
     
     if is_ollama == "open_router":
         selected_llm = st.selectbox("select llm model you want to talk with",
-                                    ("meta-llama/llama-3.3-8b-instruct:free",
+                                    (
+                                    "meta-llama/llama-4-maverick:free",
+                                    "google/gemma-3-27b-it:free",
+                                    "meta-llama/llama-3.3-8b-instruct:free",
                                     #  "google/gemma-3n-e4b-it:free",
                                     "deepseek/deepseek-v3-base:free",
                                     "google/gemma-3-12b-it:free",
                                     "google/gemma-3-4b-it:free",
-                                    "google/gemma-3-27b-it:free",
-                                    "meta-llama/llama-4-maverick:free",
                                     "deepseek/deepseek-r1:free",
                                     "qwen/qwen3-8b:free",
                                     "qwen/qwen3-14b:free",
