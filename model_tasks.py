@@ -29,7 +29,8 @@ class AskModel:
             "role": "user",
             "content": self.prompt
             }
-        ]
+        ],
+        max_completion_tokens=1000
         )
         print(completion.choices[0].message.content)
         return completion
@@ -48,6 +49,7 @@ class AskModel:
         ask_with_history = client.chat.completions.create(
         model=self.model,
         messages=self.prompt,
+        max_completion_tokens=1000
         )
         #stream=True
         print(ask_with_history.choices[0].message.content)
