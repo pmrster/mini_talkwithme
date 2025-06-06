@@ -1,6 +1,6 @@
 # Talk With Me 
 
-This project is python-based mini AI chat project for testing LLM with chat interface built with streamlit. This project supports two methods for connecting to an LLM:
+This project is python-based mini AI chat project for testing LLM thai language performance with chat interface built with streamlit. This project supports two methods for connecting to an LLM:
 
 1. **OpenRouter** (using free tier with 50 requests per day limit)
 2. **Ollama** (Local deployment only, cannot run on Streamlit Cloud)
@@ -16,6 +16,11 @@ This project is python-based mini AI chat project for testing LLM with chat inte
 - **Multiple Connection Methods**:
   - **OpenRouter**: Access via OpenRouter API with a limit of 50 requests per day.
   - **Ollama**: Local connection for running the model.
+- **Conversation Memory**: Talk with LLM base on your chat history until end message session
+  - 2 ways to end conversation session
+    1. press `Reset session` button on sidebar 
+    2. send message `/quit`
+- **Thai language assistant**: Model will perform as Thai assitant and will answer with Thai language.
 
 
 ## Demo
@@ -45,4 +50,3 @@ OLLAMA_HOST="http://localhost:11434"
 ```
 streamlit run app.py
 ```
-
