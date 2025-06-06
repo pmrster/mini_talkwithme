@@ -33,8 +33,13 @@ if "messages" not in st.session_state:
 with st.sidebar:
     # user_input_api_key = st.text_input("Enter open router API Key",type="password")
     st.write(":gray[this app using open router api]")
+    
+    ## uncomment this if you run on local
     # is_ollama = st.radio(label="select server (local)",options=["open_router", "ollama"]) ##for local test
+    
+    ## uncomment this if you deploy on streamlit cloud
     is_ollama = st.radio(label="select server (streamlit cloud)",options=["open_router"]) ## for streamlit cloud
+    
     st.write(":blue[openrouter will limited to 50 requests]")
     st.write(":red[_warning: ollama will available only for running on local only!_]")
     
@@ -53,7 +58,6 @@ with st.sidebar:
                                     "qwen/qwen3-30b-a3b:free",
                                     "qwen/qwen3-32b:free",
                                     "qwen/qwen3-235b-a22b:free"
-                                    
                                     )
                                     )
         st.write(f"selected llm -> {selected_llm}")
@@ -110,7 +114,7 @@ if len(st.session_state.messages) == 0:
     st.session_state.messages.append({"role": "assistant", "content": response})        
         
 # Accept user input
-if prompt := st.chat_input("What is up?"):
+if prompt := st.chat_input("สอนวิธีทำออมเล็ตแบบง่ายๆหน่อย"):
     if prompt == "/quit":
         ## create file for save session on local device
         file_name = f"{datetime.now().strftime('%Y.%m.%d_%H%M%S')}_session_message_logs.json"
