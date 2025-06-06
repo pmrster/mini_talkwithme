@@ -4,9 +4,9 @@ import time
 import json
 from datetime import datetime
 
-from model_tasks import AskModel
-from functions import StreamResponse
-from prompts import thai_only_response
+from model_tasks.model_tasks import AskModel
+from functions.functions import StreamResponse
+from prompts.prompts import thai_only_response
 
 ## set config
 app_token = st.secrets["APP_TOKEN"]
