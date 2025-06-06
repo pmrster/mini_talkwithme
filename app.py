@@ -119,11 +119,13 @@ if len(st.session_state.messages) == 0:
 # Accept user input
 if prompt := st.chat_input("สอนวิธีทำออมเล็ตแบบง่ายๆหน่อย"):
     if prompt == "/quit":
+        
+        ## local only: hide on streamlit cloud
         ## create file for save session on local device
-        file_name = f"{datetime.now().strftime('%Y.%m.%d_%H%M%S')}_session_message_logs.json"
-        with open(f"messages_logs/{file_name}", "w", encoding='utf-8') as f:
-            json_string = json.dumps(st.session_state.messages, indent=4,ensure_ascii=False)
-            f.write(json_string) 
+        # file_name = f"{datetime.now().strftime('%Y.%m.%d_%H%M%S')}_session_message_logs.json"
+        # with open(f"messages_logs/{file_name}", "w", encoding='utf-8') as f:
+        #     json_string = json.dumps(st.session_state.messages, indent=4,ensure_ascii=False)
+        #     f.write(json_string) 
         
         print(f"saved messages conversation after user say /quit : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
