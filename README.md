@@ -23,13 +23,13 @@ This project is python-based mini AI chat project for testing LLM with chat inte
 <img src="demo.gif" alt="demo" max-height="500"/>
 
 
-### Requirements
+## Requirements
 
 - Open router API key
 - Installed ollama on your device (for local test)
 
 
-### To run this app
+## To run this app
 - create `secrets.toml` under `/.streamlit`
 - enter your key on `secrets.toml`
 ```
