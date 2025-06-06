@@ -80,13 +80,15 @@ with st.sidebar:
     reset_button = st.button("Reset session", type="primary")
     
     if reset_button:
-        file_name = f"{datetime.now().strftime('%Y.%m.%d_%H%M%S')}_session_message_logs.json"
-        with open(f"messages_logs/{file_name}", "w", encoding='utf-8') as f:
-            json_string = json.dumps(st.session_state.messages, indent=4,ensure_ascii=False)
-            f.write(json_string) 
+        
+        ## local only: hide on streamlit cloud
+        # file_name = f"{datetime.now().strftime('%Y.%m.%d_%H%M%S')}_session_message_logs.json"
+        # with open(f"messages_logs/{file_name}", "w", encoding='utf-8') as f:
+        #     json_string = json.dumps(st.session_state.messages, indent=4,ensure_ascii=False)
+        #     f.write(json_string) 
         
         
-        print(f"saved messages conversation after clear seesion: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        # print(f"saved messages conversation after clear seesion: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         
         st.session_state.messages = []
         print("cleared session!!")
@@ -95,7 +97,7 @@ with st.sidebar:
 
 ## chat area
 st.title("chatwithme")
-st.caption("update: 2025.06.07 1:09AM")
+st.caption("update: 2025.06.07 2:39AM")
 st.write(":gray[can using open router api or your local ollama]")
 
 for message in st.session_state.messages:
