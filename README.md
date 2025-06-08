@@ -6,6 +6,9 @@ This project is python-based mini AI chat project for testing LLM thai language 
 2. **Ollama** (Local deployment only, cannot run on Streamlit Cloud)
 
 
+<img src="sample-mobile.png" alt="sample" max-height="350"/>
+
+
 <img src="sample.png" alt="sample" max-height="500"/>
 
 
@@ -23,6 +26,7 @@ This project is python-based mini AI chat project for testing LLM thai language 
 - **Thai language assistant**: Model will perform as Thai assitant and will answer with Thai language.
 
 
+
 ## Demo
 
 <img src="demo.gif" alt="demo" max-height="500"/>
@@ -35,6 +39,7 @@ This project is python-based mini AI chat project for testing LLM thai language 
 
 
 ## To run this app
+
 - create `secrets.toml` under `/.streamlit`
 - enter your key on `secrets.toml`
 ```
